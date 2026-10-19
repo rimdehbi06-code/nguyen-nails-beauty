@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf4f0">
+  <meta name="description" content="Nguyen Beauty Nails in Gaggenau – entdecken Sie Maniküre, Pediküre und gepflegte Nägel. Rufen Sie uns für einen Termin an.">
+  <title>Nguyen Beauty Nails | Nagelstudio in Gaggenau</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #fffaf7; --blush: #f4d9d5; --rose: #c87979; --rose-dark: #9f565a;
+      --gold: #b88a4a; --ink: #2f2422; --muted: #756765; --line: #eadbd5;
+      --white: #fff; --shadow: 0 18px 50px rgba(88, 51, 44, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--cream); font-family: "DM Sans", sans-serif; line-height: 1.6; }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    .container { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    .announcement { background: var(--ink); color: #fff8f4; text-align: center; padding: 8px 14px; font-size: .78rem; letter-spacing: .06em; }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(255,250,247,.94); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(234,219,213,.8); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 82px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
+    .brand-mark { color: var(--gold); font-family: "Playfair Display", serif; font-size: 2.25rem; font-style: italic; line-height: 1; border-right: 1px solid var(--line); padding-right: 12px; }
+    .brand-name { font-family: "Playfair Display", serif; letter-spacing: .13em; line-height: 1.1; font-size: 1.02rem; }
+    .brand-name small { display: block; font: 500 .58rem "DM Sans", sans-serif; letter-spacing: .28em; margin-top: 5px; }
+    nav { display: flex; gap: 23px; align-items: center; }
+    nav a { text-decoration: none; font-size: .75rem; font-weight: 600; letter-spacing: .05em; }
+    nav a:hover { color: var(--rose-dark); }
+    .button { display: inline-flex; justify-content: center; align-items: center; gap: 9px; padding: 13px 21px; border-radius: 999px; border: 1px solid transparent; text-decoration: none; font-size: .85rem; font-weight: 700; transition: transform .2s, background .2s; cursor: pointer; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--rose); color: white; box-shadow: 0 8px 20px rgba(200,121,121,.23); }
+    .button-primary:hover { background: var(--rose-dark); }
+    .button-outline { border-color: var(--gold); color: var(--ink); background: rgba(255,255,255,.55); }
+    .button-outline:hover { background: #fff; }
+    .menu-toggle { display: none; border: 1px solid var(--line); background: white; border-radius: 50%; width: 44px; height: 44px; font-size: 1.2rem; }
+    .hero { position: relative; overflow: hidden; min-height: 580px; display: grid; align-items: center; background: linear-gradient(90deg, rgba(255,246,242,.97) 0%, rgba(255,246,242,.9) 40%, rgba(255,246,242,.06) 100%), url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1800&q=85') center 48% / cover; }
+    .hero-content { max-width: 570px; padding: 84px 0; }
+    .eyebrow { text-transform: uppercase; color: var(--gold); font-size: .74rem; font-weight: 700; letter-spacing: .2em; }
+    h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 500; line-height: 1.15; }
+    h1 { font-size: clamp(3rem, 6vw, 5.4rem); letter-spacing: -.035em; margin: 14px 0 6px; }
+    .script { color: var(--rose-dark); font-family: "Playfair Display", serif; font-style: italic; font-size: clamp(1.4rem, 2.8vw, 2rem); }
+    .hero p { color: #5e4b47; max-width: 470px; margin: 22px 0 27px; font-size: 1.02rem; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .trust-row { display: flex; align-items: center; gap: 12px; margin-top: 28px; font-size: .86rem; color: var(--muted); }
+    .stars { color: var(--gold); letter-spacing: .08em; font-size: 1.15rem; }
+    section { padding: 86px 0; }
+    .section-head { text-align: center; max-width: 670px; margin: 0 auto 42px; }
+    .section-head h2 { font-size: clamp(2rem, 4vw, 3rem); margin: 10px 0 14px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .ornament { color: var(--gold); letter-spacing: .4em; margin-top: 10px; }
+    .services { background: #fff; }
+    .service-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+    .service-card { border: 1px solid var(--line); border-radius: 18px; padding: 30px; background: linear-gradient(145deg, #fffdfa, #fff5f2); display: flex; gap: 20px; align-items: flex-start; }
+    .service-icon { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: #f9e6e2; color: var(--rose-dark); flex-shrink: 0; font-size: 1.5rem; }
+    .service-card h3 { margin: 0 0 7px; font-size: 1.45rem; }
+    .service-card p { color: var(--muted); margin: 0; font-size: .93rem; }
+    .service-note { text-align: center; color: var(--muted); font-size: .86rem; margin: 24px 0 0; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .about-photo { min-height: 450px; border-radius: 180px 180px 18px 18px; background: url('https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1100&q=85') center / cover; box-shadow: var(--shadow); }
+    .about-copy h2 { font-size: clamp(2rem, 4vw, 3rem); margin: 12px 0 18px; }
+    .about-copy p { color: var(--muted); }
+    .about-points { display: grid; gap: 12px; margin: 25px 0 30px; }
+    .about-points span::before { content: "✦"; color: var(--gold); margin-right: 12px; }
+    .details { background: #f8e9e5; }
+    .details-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+    .detail-card { background: rgba(255,255,255,.76); border: 1px solid rgba(234,219,213,.9); border-radius: 18px; padding: 28px; }
+    .detail-card h3 { font-size: 1.4rem; margin: 0 0 18px; }
+    .detail-card p { color: var(--muted); margin: 0 0 12px; }
+    .hours-row { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding: 8px 0; font-size: .9rem; }
+    .hours-row:last-child { border: 0; }
+    .hours-row span:last-child { font-weight: 600; white-space: nowrap; }
+    .contact-link { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; font-weight: 700; margin: 6px 0 15px; color: var(--rose-dark); }
+    .map-frame { width: 100%; height: 170px; border: 0; border-radius: 12px; margin-top: 12px; }
+    .reviews { background: #fff; }
+    .review-panel { max-width: 780px; margin: auto; padding: 44px 30px; text-align: center; border-radius: 24px; border: 1px solid var(--line); background: linear-gradient(135deg, #fffaf7, #fff); box-shadow: var(--shadow); }
+    .rating { font-family: "Playfair Display", serif; font-size: 4rem; line-height: 1; margin: 14px 0 5px; }
+    .review-panel p { color: var(--muted); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .gallery-grid img { width: 100%; height: 240px; object-fit: cover; border-radius: 14px; transition: transform .25s; }
+    .gallery-grid img:hover { transform: translateY(-4px); }
+    .cta { padding: 70px 0; text-align: center; background: linear-gradient(120deg, #f3d8d3, #fff6f1); }
+    .cta h2 { font-size: clamp(2rem, 4vw, 3.1rem); margin: 0 0 14px; }
+    .cta p { color: #69534f; margin: 0 auto 24px; }
+    footer { background: #302421; color: #fff5ef; padding: 48px 0 22px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 30px; }
+    footer .brand-name { font-size: 1.1rem; }
+    footer p, footer a { color: #ddc9c1; font-size: .88rem; }
+    footer a { text-decoration: none; }
+    footer a:hover { color: white; }
+    .footer-links { display: grid; gap: 8px; align-content: start; }
+    .copyright { border-top: 1px solid rgba(255,255,255,.16); margin-top: 34px; padding-top: 18px; display: flex; justify-content: space-between; gap: 20px; color: #bfa9a0; font-size: .75rem; }
+    .legal-note { font-size: .78rem; opacity: .8; }
+    @media (max-width: 900px) {
+      nav { gap: 13px; } nav a { font-size: .68rem; } .nav > .button { display: none; }
+      .hero { min-height: 540px; background-position: 58% center; }
+      .details-grid { grid-template-columns: 1fr 1fr; } .detail-card:last-child { grid-column: 1 / -1; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 680px) {
+      .container { width: min(100% - 30px, 560px); }
+      .nav { min-height: 72px; } .menu-toggle { display: block; }
+      nav { display: none; position: absolute; top: 72px; left: 0; right: 0; background: var(--cream); padding: 18px 24px 24px; border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 0; }
+      nav.open { display: flex; } nav a { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: .85rem; }
+      .brand-mark { font-size: 1.9rem; } .brand-name { font-size: .9rem; }
+      .hero { min-height: 600px; align-items: end; background-image: linear-gradient(0deg, rgba(255,246,242,.98) 0%, rgba(255,246,242,.88) 48%, rgba(255,246,242,.12) 100%), url('https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=80'); background-position: center top; }
+      .hero-content { padding: 260px 0 48px; } h1 { font-size: clamp(2.8rem, 14vw, 4rem); }
+      section { padding: 62px 0; } .service-grid, .about-grid, .details-grid, .footer-grid { grid-template-columns: 1fr; }
+      .service-card { padding: 23px; } .about-grid { gap: 30px; } .about-photo { min-height: 340px; order: 2; }
+      .detail-card:last-child { grid-column: auto; } .gallery-grid img { height: 180px; }
+      .copyright { flex-direction: column; } .hero-actions .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">NGUYEN BEAUTY NAILS · GAGGENAU</div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#start" aria-label="Nguyen Beauty Nails Startseite">
+        <span class="brand-mark">NB</span><span class="brand-name">NGUYEN<small>BEAUTY NAILS</small></span>
+      </a>
+      <nav id="mainNav" aria-label="Hauptnavigation">
+        <a href="#start">START</a><a href="#ueber-uns">ÜBER UNS</a><a href="#leistungen">LEISTUNGEN</a><a href="#zeiten">ÖFFNUNGSZEITEN</a><a href="#bewertungen">BEWERTUNGEN</a><a href="#kontakt">KONTAKT</a>
+      </nav>
+      <a class="button button-outline" href="tel:+491772783946">☎ Termin anfragen</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="start">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Schönheit bis in die Fingerspitzen</div>
+          <h1>Nguyen<br>Beauty Nails</h1>
+          <div class="script">Dein Nagelstudio in Gaggenau</div>
+          <div class="ornament">──── ♡ ────</div>
+          <p>Ein gepflegter Look beginnt mit den Details. Entdecke unser Nagelstudio in Gaggenau und rufe uns an, um deinen nächsten Termin anzufragen.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="tel:+491772783946">☎ Jetzt anrufen</a>
+            <a class="button button-outline" href="#leistungen">Leistungen entdecken ↗</a>
+          </div>
+          <div class="trust-row"><span class="stars">★★★★★</span><span><strong>4,5 von 5</strong> · 75 Rezensionen laut bereitgestellten Angaben</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="leistungen">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Für dein Wohlgefühl</div>
+          <h2>Unsere Leistungen</h2>
+          <p>Gönn dir einen gepflegten Look und einen kleinen Moment nur für dich.</p>
+          <div class="ornament">✦ ─── ♡ ─── ✦</div>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon">✧</div><div><h3>Maniküre</h3><p>Für gepflegte Hände und schön aussehende Nägel. Frag uns telefonisch nach den verfügbaren Maniküre-Behandlungen und Preisen.</p></div></article>
+          <article class="service-card"><div class="service-icon">♡</div><div><h3>Pediküre</h3><p>Gepflegte Füße für ein angenehmes Gefühl. Kontaktiere uns für Details zu den angebotenen Behandlungen und Preisen.</p></div></article>
+        </div>
+        <p class="service-note">Weitere Behandlungen und aktuelle Preise bitte direkt beim Studio erfragen.</p>
+      </div>
+    </section>
+
+    <section id="ueber-uns">
+      <div class="container about-grid">
+        <div class="about-photo" role="img" aria-label="Elegante Nagelpflege als stimmungsvolles Beispielfoto"></div>
+        <div class="about-copy">
+          <div class="eyebrow">Willkommen bei uns</div>
+          <h2>Deine kleine Auszeit für schöne Nägel</h2>
+          <p>Bei Nguyen Beauty Nails in Gaggenau dreht sich alles um gepflegte Nägel und deinen persönlichen Look. Wir möchten, dass du dich bei deinem Besuch wohlfühlst.</p>
+          <div class="about-points"><span>Maniküre und Pediküre</span><span>Persönliche Terminabsprache</span><span>Mitten in Gaggenau</span></div>
+          <a class="button button-primary" href="tel:+491772783946">Fragen? Ruf uns an</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="details" id="zeiten">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Besuche uns</div><h2>Alles auf einen Blick</h2><p>Öffnungszeiten, Kontakt und Standort – einfach zu finden.</p>
+        </div>
+        <div class="details-grid">
+          <article class="detail-card">
+            <h3>Öffnungszeiten</h3>
+            <div class="hours-row"><span>Montag</span><span>09:00–19:00</span></div>
+            <div class="hours-row"><span>Dienstag</span><span>09:00–19:00</span></div>
+            <div class="hours-row"><span>Mittwoch</span><span>09:00–19:00</span></div>
+            <div class="hours-row"><span>Donnerstag</span><span>09:00–19:00</span></div>
+            <div class="hours-row"><span>Freitag</span><span>09:00–19:00</span></div>
+            <div class="hours-row"><span>Samstag</span><span>09:00–18:00</span></div>
+            <div class="hours-row"><span>Sonntag</span><span>Geschlossen</span></div>
+            <p class="legal-note">Öffnungszeiten bitte bei Bedarf telefonisch bestätigen.</p>
+          </article>
+          <article class="detail-card" id="kontakt">
+            <h3>Kontakt</h3>
+            <p>Du möchtest einen Termin anfragen oder hast eine Frage? Wir freuen uns auf deinen Anruf.</p>
+            <a class="contact-link" href="tel:+491772783946">☎ 0177 2783946</a>
+            <a class="button button-primary" href="tel:+491772783946">Jetzt anrufen</a>
+            <p class="legal-note">Terminvereinbarung telefonisch.</p>
+          </article>
+          <article class="detail-card">
+            <h3>Unser Standort</h3>
+            <p><strong>Hauptstraße 36 B</strong><br>76571 Gaggenau, Deutschland</p>
+            <a class="contact-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Nguyen+Beauty+Nails%2C+Hauptstra%C3%9Fe+36+B%2C+76571+Gaggenau">↗ Route planen</a>
+            <iframe class="map-frame" title="Karte: Nguyen Beauty Nails in Gaggenau" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Hauptstra%C3%9Fe%2036%20B%2C%2076571%20Gaggenau&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" id="bewertungen">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Eindrücke von Kundinnen und Kunden</div><h2>Bewertungen</h2><p>Die angegebene Google-Bewertung im Überblick.</p></div>
+        <div class="review-panel">
+          <div class="eyebrow">Nguyen Beauty Nails · Gaggenau</div>
+          <div class="rating">4,5</div>
+          <div class="stars" aria-label="Bewertung 4,5 von 5 Sternen">★★★★★</div>
+          <p>4,5 von 5 Sternen bei 75 Rezensionen laut den bereitgestellten Angaben.</p>
+          <a class="button button-outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Nguyen+Beauty+Nails%2C+Hauptstra%C3%9Fe+36+B%2C+76571+Gaggenau">Alle Bewertungen ansehen ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="galerie">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">Inspiration</div><h2>Schöne Details</h2><p>Beispielbilder zur Inspiration. Sie sind keine bestätigten Fotos der Arbeiten oder Räumlichkeiten des Studios.</p></div>
+        <div class="gallery-grid">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=700&q=80" alt="Beispielbild eleganter Nagelpflege">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=700&q=80" alt="Beispielbild Maniküre">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=700&q=80" alt="Beispielbild Nail Art">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=700&q=80" alt="Beispielbild gepflegte Nägel">
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="eyebrow">Wir freuen uns auf dich</div>
+        <h2>Bereit für deinen nächsten Termin?</h2>
+        <p>Ruf Nguyen Beauty Nails in Gaggenau an und frage deinen Wunschtermin an.</p>
+        <a class="button button-primary" href="tel:+491772783946">☎ 0177 2783946 · Jetzt anrufen</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#start"><span class="brand-mark">NB</span><span class="brand-name">NGUYEN<small>BEAUTY NAILS</small></span></a>
+          <p>Dein Nagelstudio in Gaggenau.<br>Maniküre · Pediküre</p>
+        </div>
+        <div class="footer-links"><strong>Navigation</strong><a href="#leistungen">Leistungen</a><a href="#zeiten">Öffnungszeiten</a><a href="#bewertungen">Bewertungen</a><a href="#kontakt">Kontakt</a></div>
+        <div class="footer-links"><strong>Kontakt</strong><a href="tel:+491772783946">0177 2783946</a><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Nguyen+Beauty+Nails%2C+Hauptstra%C3%9Fe+36+B%2C+76571+Gaggenau">Hauptstraße 36 B, 76571 Gaggenau</a><span>Mo–Fr 09:00–19:00<br>Sa 09:00–18:00 · So geschlossen</span></div>
+      </div>
+      <div class="copyright"><span>© <span id="year"></span> Nguyen Beauty Nails</span><span>Hinweis: Impressum und Datenschutzerklärung vor Veröffentlichung ergänzen.</span></div>
+    </div>
+  </footer>
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.textContent = isOpen ? '✕' : '☰';
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); toggle.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
